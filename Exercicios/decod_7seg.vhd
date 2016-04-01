@@ -1,3 +1,7 @@
+-- Exercicio feito em sala de aula
+
+-- Fazer um decodificador de 7 segmentos (LEDR) que posibilite a impressão de números de 0 a 9 e de letras de A a F.
+
 library ieee;
 use ieee.std_logic_1164.all;
 
