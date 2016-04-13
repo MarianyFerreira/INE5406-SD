@@ -11,7 +11,14 @@ end;
 
 architecture arch of multiplex2x1 is
 begin
-    output <= input0 when sel = '0' else
+    output <= input0 when sel = '000' else
     input1;
+
+    	 outDecod <= input0 when sel = "000" else 	-- U
+					 input1 when sel = "001" else 	-- V
+					 input2 when sel = "010" else 	-- W
+					 input3 when sel = "011" else 	-- X
+					 input4;						-- y
+
     
 end arch;
