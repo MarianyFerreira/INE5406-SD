@@ -12,6 +12,6 @@ end;
 architecture arch of multiplex2x1 is
 begin
     output <= input0 when sel = '0' else
-    input1;
+              input1;
     
 end arch;
