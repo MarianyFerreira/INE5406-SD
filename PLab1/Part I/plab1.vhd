@@ -3,10 +3,10 @@ USE ieee.std_logic_1164.all;
 		
 entity plab1 is
 port (
-		SW   : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-		LEDR : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
-		HEX0  : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
-		);
+	SW   : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+	LEDR : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
+	HEX0  : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+     );
 end plab1;
 
 architecture Behavior of plab1 is
@@ -16,7 +16,7 @@ component multiplex2x1
         input0, input1: in std_logic_vector(7 downto 0);
         sel: in std_logic;
         output: out std_logic_vector(7 downto 0)
-    );
+	 );
 end component;
 
 component multiplex5x1
@@ -24,18 +24,18 @@ component multiplex5x1
         input0, input1, input2, input3, input4 : in std_logic_vector(2 downto 0);
         sel: in std_logic_vector(2 downto 0);
         output: out std_logic_vector(2 downto 0)
-    );
+    	);
 end component;
 
 component decod
-	 port (	
-		inC1, inC2,inC3: in std_logic;
-		outDecod: out std_logic_vector(6 downto 0)
+     port(	
+	inC1, inC2,inC3: in std_logic;
+	outDecod: out std_logic_vector(6 downto 0)
 	 );
 end component;
 
-		signal M : std_logic_vector(2 downto 0);
-		signal S : std_logic_vector(17 downto 0);
+	signal M : std_logic_vector(2 downto 0);
+	signal S : std_logic_vector(17 downto 0);
 
 BEGIN
 		-- Port map
