@@ -1,15 +1,15 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 		
-entity plab is
+entity plab1 is
 port (
 		SW   : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
 		LEDR : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
 		HEX0  : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 		);
-end plab;
+end plab1;
 
-architecture Behavior of plab is
+architecture Behavior of plab1 is
 
 component multiplex2x1
     port(
