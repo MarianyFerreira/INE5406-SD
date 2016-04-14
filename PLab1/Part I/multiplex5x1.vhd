@@ -11,9 +11,9 @@ end;
 
 architecture arch of multiplex5x1 is
 begin
-    output <= input0 when sel = "000" else 
-				  input1 when sel = "001" else 	
-				  input2 when sel = "010" else 	
-			  	  input3 when sel = "011" else 	
-				  input4;									
+    output <= 	input0 when sel = "000" else 
+		input1 when sel = "001" else 	
+		input2 when sel = "010" else 	
+		input3 when sel = "011" else 	
+		input4;									
 end arch;
