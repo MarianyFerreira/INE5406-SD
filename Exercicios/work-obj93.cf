@@ -1,0 +1,4 @@
+v 3
+file . "PEx1_decodificador2x4.vhd" "20160401224147.000" "20160422095706.510":
+  entity decodificador2x4 at 5( 292) + 0 on 11;
+  architecture decoder of decodificador2x4 at 16( 531) + 0 on 12;

@@ -1,0 +1,11 @@
+-- Hello World test
+
+	Take a hello.vhdl file.
+	Inside the folder with the hello.vhdl make:
+
+		$ ghdl -a hello.vhdl	-- compile
+		$ ghdl -e hello_world 	-- build an executable
+		
+		$ ghdl -r hello_world	-- run
+								-- or
+		$ ./hello_world			-- run
