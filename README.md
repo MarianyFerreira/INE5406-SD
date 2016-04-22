@@ -1,3 +1,4 @@
-# INE5406 - Sistemas Digitais
+# INE5406 - Digital Systems
 
-Repositório referente aos exercícios, provas e trabalhos da parte prática do curso INE5406 de Sistemas Digitais
+Repository related to exercises, tests and work of the practical part of the course INE5406 Digital Systems
+
