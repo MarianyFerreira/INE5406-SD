@@ -6,13 +6,13 @@ Install GHDL Ubuntu:
 
 Use GHDL Ubuntu:
 
-	Inside the folder with the VHDL files, first, you have to compile the file; this is called analysis of a design file
-	in VHDL terms.
+	Inside the folder with the VHDL files, first, you have to compile the file; this is called analysis
+	of a design file in VHDL terms.
 
 		$ ghdl -a file_name.vhdl
 
-	This command generates a file 'file_name.o', which is the object file corresponding to your VHDL program.  This
-	command also creates or updates a file 'work-obj93.cf', which describes the library 'work'.
+	This command generates a file 'file_name.o', which is the object file corresponding to your VHDL program.
+	This command also creates or updates a file 'work-obj93.cf', which describes the library 'work'.
 
 
 
@@ -20,8 +20,8 @@ Use GHDL Ubuntu:
 
 		$ ghdl -e entity_name
 
-	The '-e' option means elaborate. With this option, GHDL creates code in order to elab-orate a design, with the 'hello'
-	entity at the top of the hierarchy. 
+	The '-e' option means elaborate. With this option, GHDL creates code in order to elab-orate a design,
+	with the 'hello' entity at the top of the hierarchy. 
 
 
 
