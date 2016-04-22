@@ -4,7 +4,7 @@ Install GHDL Ubuntu:
 	$ sudo add-apt-repository ppa:pgavin/ghdl
 	$ sudo apt-get install ghdl
 
-Install VHDL package:
+Install VHDL package to Sublime text editor:
 
 	Download and Installation to Sublime Control:
 
