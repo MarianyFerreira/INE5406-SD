@@ -10,23 +10,25 @@ end entity;
 
 architecture arch of cont_zeros_esq is
 
-    signal cont std_logic_vector(2 downto 0);
+    signal cont : std_logic_vector(2 downto 0) := "000";		-- Signal pra contar quantos zeros a esquerda tem
+    signal inputS: std_logic_vector(3 downto 0);				-- Signal que recebe a entrada inpt
+
 
 begin
 
-	cont <= "000";
+	inputS <= inpt;												-- atribuição do inpt no int
 
-	for indice in 3 downto 0 loop
+	for indice in 3 downto 0 loop								-- for que decrementa indice = 3 >>> 0
 		
-		if (inpt(indice) = '0') then
+		if (inputS(indice) = '0') then							-- se o vator no indice (3, 2, 1, 0) tiver zeros
 
-			cont <= std_logic_vector(unsigned(cont) + 1);
+			cont <= std_logic_vector(unsigned(cont) + 1);		-- soma 1 ao cont
 
 		end if;
 	
 	end loop;
 
-	outp <= cont;
+	outp <= cont;												-- saida recebe o valor da quantidade de zeros
 
 and arch;
 
