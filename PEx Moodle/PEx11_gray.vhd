@@ -16,7 +16,7 @@ entity graycode_dist is
 	);
 end entity;
 
-architecture arch of cont_zeros_esq is
+architecture arch of graycode_dist is
 
 begin
 
