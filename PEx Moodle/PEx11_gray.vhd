@@ -31,11 +31,11 @@ begin
 
 	Mas acredito que tem um jeito melhor.
 
-		se input0 = 0000 e input1 = 0010 então
+							-- se input0 = 0000 e input1 = 0010 então, por exemplo
 
 		se indice0 < indice1 então
 
-		resultado = indice1 - indice0;
+		resultado = indice1 - indice0;		-- logo: resultado = 3
 
 		se não 
 			
