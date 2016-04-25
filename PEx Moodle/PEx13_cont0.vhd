@@ -32,10 +32,10 @@ begin
 	
 		end loop;
 
-	and process;
+	end process;
 
 	outp <= cont;							-- saida recebe o valor da quantidade de zeros
 
-and arch;
+end arch;
 
 
