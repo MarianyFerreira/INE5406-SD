@@ -2,7 +2,7 @@
 -- The output (outp) must have 3 bits and show the number of zeros to the left of the entrance.
 library ieee;
 use ieee.std_logic_1164.all;
-
+use ieee.numeric_std.all;
 
 entity cont_zeros_esq is
 	port(
@@ -13,13 +13,25 @@ end entity;
 
 architecture arch of cont_zeros_esq is
 
-begin
 
-	outp <= "000" when inpt(3) = '1' else
-            "001" when inpt(3 downto 2) = "01" else
-            "010" when inpt(3 downto 1) = "001" else
-            "011" when inpt(3 downto 0) = "0001" else
-            "100";
+begin
+	signal val : std_logic := '1';
+
+	process (inpt)
+
+		begin
+
+		for indice in 3 downto 0 loop					-- for que decrementa indice = 3 >>> 0
+		
+			if (inpt(indice) = '0') then				-- se o vator no indice (3, 2, 1, 0) tiver zeros
+
+				outp <= std_logic_vector(unsigned(outp) + unsigned(val));	-- soma 1 ao cont
+
+			end if;
+	
+		end loop;
+
+	end process;
 
 end arch;
 
