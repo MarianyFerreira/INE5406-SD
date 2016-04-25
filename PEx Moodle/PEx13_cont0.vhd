@@ -1,5 +1,8 @@
 -- Make a circuit that counts how many consecutive zeros are in the left entered (INPT) of 4 bits.
 -- The output (outp) must have 3 bits and show the number of zeros to the left of the entrance.
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity cont_zeros_esq is
 	port(
