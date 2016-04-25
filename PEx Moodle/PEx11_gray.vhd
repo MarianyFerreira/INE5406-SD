@@ -15,3 +15,30 @@ entity graycode_dist is
 		outp: out std_logic_vector(width-1 downto 0)
 	);
 end entity;
+
+architecture arch of cont_zeros_esq is
+
+begin
+
+    Não consegui resolver, não encontrei uma forma de achar as distâncias sem ser fazendo cada uma a mão e atribuindo um incide a elas, tipo:
+
+			'0000' tem indice = 0
+			'0001' tem indice = 1
+			'0011' tem indice = 2
+			'0010' tem indice = 3   etc
+
+	Ai eu vejo qual o indice e subtraio pra saber quanto um indice é maior do que o outro.
+
+	Mas acredito que tem um jeito melhor.
+
+		se input0 = 0000 e input1 = 0010 então
+
+		se indice0 < indice1 então
+
+		resultado = indice1 - indice0;
+
+		se não 
+			
+		resultado = indice0 - indice1;
+
+end arch;
