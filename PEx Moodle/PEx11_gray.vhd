@@ -34,13 +34,13 @@ architecture arch of graycode_dist is
 begin
 	-- convert gray to binary
 
-	-- binary0 <= inpt0(width-1) & ( (inpt0(width-2 downto 1)) xor (inpt0(width-3 downto 0))) when width-1 > 4
+	-- binary0 <= inpt0(width-1) & ( (inpt0(width-2 downto 1)) xor (inpt0(width-3 downto 0))) when width > 4
     binary0(3) <= inpt0(3);
     binary0(2) <= inpt0(3) xor inpt0(2);
     binary0(1) <= binary0(2) xor inpt0(1);
     binary0(0) <= binary0(1) xor inpt0(0);
 
-	-- binary1 <= inpt1(width-1) & ( (inpt0(width-2 downto 1)) xor (inpt0(width-3 downto 0))) when width > 4 else
+	-- binary1 <= inpt1(width-1) & ( (inpt1(width-2 downto 1)) xor (inpt1(width-3 downto 0))) when width > 4 else
     binary1(3) <= inpt1(3);
     binary1(2) <= inpt1(3) xor inpt1(2);
     binary1(1) <= binary1(2) xor inpt1(1);
