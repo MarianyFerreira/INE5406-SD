@@ -18,17 +18,32 @@ end entity;
 
 architecture arch of graycode_dist is
 
-begin
+	 signal binary0 : std_logic_vector(width-1 downto 0);
+	 signal binary1 : std_logic_vector(width-1 downto 0);
+	 signal sig14 : std_logic_vector(width-1 downto 0) :="1110";
 
-	-- convert gray to binary and make: 
+begin
+	-- convert gray to binary
+    binary0(3) <= inpt0(3);
+    binary0(2) <= inpt0(3) xor inpt0(2);
+    binary0(1) <= inpt0(3) xor inpt0(2) xor inpt0(1);
+    binary0(0) <= inpt0(3) xor inpt0(2) xor inpt0(1) xor inpt0(0);
+
+    binary1(3) <= inpt1(3);
+    binary1(2) <= inpt1(3) xor inpt1(2);
+    binary1(1) <= inpt1(3) xor inpt1(2) xor inpt1(1);
+    binary1(0) <= inpt1(3) xor inpt1(2) xor inpt1(1) xor inpt1(0);
+    
+    
+	-- verify distances
 	
-	if inpt0 < inpt1 then
+	if binary0 < binary1 then
 	
-		outp <= (inpt1 - inpt0);
+		outp <= (binary1 - binary0);
 	
-	elsif inpt0 > inpt1 then
+	elsif binary0 > binary1 then
 	
-		outp <= ((unsigned(inpt0 - 14)) + inpt1);
+		outp <= std_logic_vector((unsigned(sig14) - unsigned(binary0)) + unsigned(binary1));
 		
 	else 
 		outp <= "0000";
