@@ -20,7 +20,8 @@ architecture arch of graycode_dist is
 
 begin
 
-
+	-- convert gray to binary and make: 
+	
 	if inpt0 < inpt1 then
 	
 		outp <= (inpt1 - inpt0);
