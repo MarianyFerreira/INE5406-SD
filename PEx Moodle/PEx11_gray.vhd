@@ -46,9 +46,9 @@ begin
 
 
 	-- verify distances option 1
-	outp <= std_logic_vector((unsigned(binary1) - (unsigned(binary0)))) when (binary0 < binary1) else
+	outp <= std_logic_vector((unsigned(binary1) - (unsigned(binary0)))) when binary0 < binary1 else
 
-	std_logic_vector((unsigned(sig14) - unsigned(binary0)) + unsigned(binary1)) when (binary0 > binary1) else
+	std_logic_vector(unsigned(binary0) - (unsigned(sig14)) + unsigned(binary1)) when binary0 > binary1 else
 
 	"0000";
 
