@@ -5,8 +5,12 @@
 -- For example: being inpt0 = "0101" and inpt1 = "1111", the output should be "0100"
 -- (4 in binary) as they are needed 4 transitions to go from 0101 to 1111
 -- (0101 -> 0100 -> 1100 -> 1101 -> 1111).
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity graycode_dist is
+
 	generic(width: integer := 4);
 
 	port(
@@ -22,6 +26,11 @@ architecture arch of graycode_dist is
 	 signal binary1 : std_logic_vector(width-1 downto 0);
 	 signal sig14 : std_logic_vector(width-1 downto 0) :="1110";
 
+
+	-- verify distances option 2
+	 --signal binary0Minor : std_logic_vector(width-1 downto 0);
+	 --signal binary0Major : std_logic_vector(width-1 downto 0);
+
 begin
 	-- convert gray to binary
     binary0(3) <= inpt0(3);
@@ -33,20 +42,22 @@ begin
     binary1(2) <= inpt1(3) xor inpt1(2);
     binary1(1) <= inpt1(3) xor inpt1(2) xor inpt1(1);
     binary1(0) <= inpt1(3) xor inpt1(2) xor inpt1(1) xor inpt1(0);
-    
-    
-	-- verify distances
-	
-	if binary0 < binary1 then
-	
-		outp <= (binary1 - binary0);
-	
-	elsif binary0 > binary1 then
-	
-		outp <= std_logic_vector((unsigned(sig14) - unsigned(binary0)) + unsigned(binary1));
-		
-	else 
-		outp <= "0000";
 
+
+
+	-- verify distances option 1
+	outp <= std_logic_vector((unsigned(binary1) - (unsigned(binary0)))) when (binary0 < binary1) else
+
+	std_logic_vector((unsigned(sig14) - unsigned(binary0)) + unsigned(binary1)) when (binary0 > binary1) else
+
+	"0000";
+
+	-- verify distances option 2
+	--binary0Minor <= binary1 - binary0);
+	--binary0Major <= std_logic_vector((unsigned(sig14) - unsigned(binary0)) + unsigned(binary1));
+
+	--outp <= binary0Minor when (binary0 < binary1) else
+	--		binary0Major when (binary0 > binary1) else
+	--		"0000";
 
 end arch;
