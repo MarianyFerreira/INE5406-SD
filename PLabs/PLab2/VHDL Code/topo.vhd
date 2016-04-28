@@ -12,7 +12,7 @@ ARCHITECTURE Structural OF topo IS
 	
 	SIGNAL Qm : STD_LOGIC;
 	SIGNAL Q : STD_LOGIC;
- -- SIGNAL Qbar : OUT STD_LOGIC 						-- not Q
+	SIGNAL Qbar : OUT STD_LOGIC 						-- not Q
 
 
 	COMPONENT Dlatch_Master
