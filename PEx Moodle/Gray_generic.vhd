@@ -21,7 +21,7 @@ architecture arch of graycode_dist is
 
 begin
         
-        process(inpt0, inpt1, binary0, binary1)
+        process(inpt0, inpt1)
         
             begin
 
