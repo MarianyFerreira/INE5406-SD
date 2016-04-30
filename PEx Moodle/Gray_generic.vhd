@@ -30,7 +30,7 @@ begin
 	            binary0(width-1) <= inpt0(width-1);
     
                 for i in width-2 to 0 loop
-	                binary0(i) <= inpt0(i+1) xor inpt0(i);
+	                binary0(i) <= binary0(i+1) xor inpt0(i);
                 end loop;
     
              -- Convert Gray to Binary1
@@ -38,7 +38,7 @@ begin
                  binary1(width-1) <= inpt1(width-1);
     
                 for j in width-2 to 0 loop
-	                binary1(j) <= inpt1(j+1) xor inpt1(j);
+	                binary1(j) <= binary1(j+1) xor inpt1(j);
                 end loop;
     
              -- Output logic
