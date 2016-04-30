@@ -21,33 +21,26 @@ architecture arch of graycode_dist is
 
 begin
         
-        process(inpt0, inpt1)
+        process(inpt0, inpt1, binary0, binary1)
         
             begin
-
-             -- Convert Gray to Binary0
-                 
-	            binary0(width-1) <= inpt0(width-1);
+             -- Convert Gray to Binary
+	        binary0(width-1) <= inpt0(width-1);
+	        binary1(width-1) <= inpt1(width-1);
     
                 for i in width-2 to 0 loop
+                
 	                binary0(i) <= binary0(i+1) xor inpt0(i);
+	                binary1(i) <= binary1(i+1) xor inpt1(i);
+	                
                 end loop;
-    
-             -- Convert Gray to Binary1
-                 
-                 binary1(width-1) <= inpt1(width-1);
-    
-                for j in width-2 to 0 loop
-	                binary1(j) <= binary1(j+1) xor inpt1(j);
-                end loop;
-    
              -- Output logic
-	            
 	            if unsigned(binary1) > unsigned(binary0) then
 	                outp <=	(std_logic_vector(unsigned(binary1) - unsigned(binary0)));
+	                
 	            else
-                    outp <= (std_logic_vector(unsigned(binary0) - unsigned(binary1)));
-                end if;
+                        outp <= (std_logic_vector(unsigned(binary0) - unsigned(binary1)));
+                    end if;
 
         end process;
     
