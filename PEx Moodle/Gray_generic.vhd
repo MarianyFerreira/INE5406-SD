@@ -28,7 +28,7 @@ begin
 	        binary0(width-1) <= inpt0(width-1);
 	        binary1(width-1) <= inpt1(width-1);
     
-                for i in width-2 to 0 loop
+                for i in width-2 downto 0 loop
                 
 	                binary0(i) <= binary0(i+1) xor inpt0(i);
 	                binary1(i) <= binary1(i+1) xor inpt1(i);
