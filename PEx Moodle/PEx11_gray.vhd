@@ -24,40 +24,31 @@ architecture arch of graycode_dist is
 
 	 signal binary0 : std_logic_vector(width-1 downto 0);
 	 signal binary1 : std_logic_vector(width-1 downto 0);
-	 signal sigWidth : std_logic_vector(width-1 downto 0);
-
-
-	-- verify distances option 2
-	 --signal binary0Minor : std_logic_vector(width-1 downto 0);
-	 --signal binary0Major : std_logic_vector(width-1 downto 0);
+     
 
 begin
-	-- convert gray to binary
+        
+        process(inpt0, inpt1, binary0, binary1)
+        
+            begin
+             -- Convert Gray to Binary
+	        binary0(width-1) <= inpt0(width-1);
+	        binary1(width-1) <= inpt1(width-1);
+    
+                for i in width-2 downto 0 loop
+                
+	                binary0(i) <= binary0(i+1) xor inpt0(i);
+	                binary1(i) <= binary1(i+1) xor inpt1(i);
+	                
+                end loop;
+             -- Output logic
+	            if unsigned(binary1) > unsigned(binary0) then
+	                outp <=	(std_logic_vector(unsigned(binary1) - unsigned(binary0)));
+	                
+	            else
+                        outp <= (std_logic_vector(unsigned(binary0) - unsigned(binary1)));
+                    end if;
 
-	-- binary0 <= inpt0(width-1) & ( (inpt0(width-2 downto 1)) xor (inpt0(width-3 downto 0))) when width > 4
-    binary0(3) <= inpt0(3);
-    binary0(2) <= inpt0(3) xor inpt0(2);
-    binary0(1) <= binary0(2) xor inpt0(1);
-    binary0(0) <= binary0(1) xor inpt0(0);
-
-	-- binary1 <= inpt1(width-1) & ( (inpt1(width-2 downto 1)) xor (inpt1(width-3 downto 0))) when width > 4 else
-    binary1(3) <= inpt1(3);
-    binary1(2) <= inpt1(3) xor inpt1(2);
-    binary1(1) <= binary1(2) xor inpt1(1);
-    binary1(0) <= binary1(1) xor inpt1(0);
-
-	-- verify distances option 1
-	outp <= std_logic_vector((unsigned(binary1) - (unsigned(binary0)))) when binary0 < binary1 else
-
-	std_logic_vector((unsigned(binary1) - (unsigned(sigWidth))) + (unsigned(binary0) + '1')) when binary0 > binary1 else
-
-	"0000";
-
-	-- verify distances option 2
-	--binary0Minor <= binary1 - binary0);
-	--binary0Major <= std_logic_vector((unsigned(sig14) - unsigned(binary0)) + unsigned(binary1));
-
-	--outp <= binary0Minor when (binary0 < binary1) else
-	--		binary0Major when (binary0 > binary1) else
-	--		"0000";
+        end process;
+    
 end arch;
