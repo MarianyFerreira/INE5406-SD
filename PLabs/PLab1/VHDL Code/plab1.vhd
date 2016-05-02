@@ -35,7 +35,6 @@ component decod
 end component;
 
 	signal M : std_logic_vector(2 downto 0);
-	signal S : std_logic_vector(17 downto 0);
 
 BEGIN
 		-- Port map
