@@ -1,5 +1,6 @@
--- RS latch
--- Part I
+-- D latch
+-- Part II
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
@@ -12,15 +13,15 @@ END RSlatch;
 ARCHITECTURE Structural OF RSlatch IS
 
 	SIGNAL R_g, S_g, Qa, Qb : STD_LOGIC;
-	--ATTRIBUTE keep : boolean;
-	--ATTRIBUTE keep of R_g, S_g, Qa, Qb : SIGNAL IS true;
+	ATTRIBUTE keep : boolean;
+	ATTRIBUTE keep of R_g, S_g, Qa, Qb : SIGNAL IS true;
 
 	BEGIN
 		R_g <= R AND Clk;
 		S_g <= S AND Clk;
-		Qa <= NOT (R_g OR Qb);
-		Qb <= NOT (S_g OR Qa);
-		Q <= Qa;
+		Qa <= NOT (R_g'EVENT OR Qb'EVENT);
+		Qb <= NOT (S_g'EVENT OR Qa'EVENT);
+		Q <= Qa'EVENT;
 	END Structural;
 
 -- 3. Compilar o código. Use a ferramenta Quartus II RTL Viewer
