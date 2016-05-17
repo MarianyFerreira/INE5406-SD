@@ -19,9 +19,9 @@ ARCHITECTURE Structural OF RSlatch IS
 	BEGIN
 		R_g <= R AND Clk;
 		S_g <= S AND Clk;
-		Qa <= NOT (R_g'EVENT OR Qb);
-		Qb <= NOT (S_g'EVENT OR Qa'EVENT);
-		Q <= Qa'EVENT;
+		Qa <= NOT (R_g OR Qb);
+		Qb <= NOT (S_g OR Qa);
+		Q <= Qa;
 	END Structural;
 
 -- 3. Compilar o código. Use a ferramenta Quartus II RTL Viewer
