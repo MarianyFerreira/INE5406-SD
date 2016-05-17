@@ -18,13 +18,13 @@ ARCHITECTURE Behavior OF FFlatch_16bits IS
 
 				IF RESET = '0' THEN
 				
-					Q <= (OTHERS >= '0')
+					Q <= (OTHERS >= '0');
 
 				ELSIF RISING_EDGE(CLK) THEN
 				
-					Q <= D ;
+					Q <= D;
 				
-				END IF ;
-		END PROCESS ;
+				END IF;
+		END PROCESS;
 
-	END Behavior ;
+	END Behavior;

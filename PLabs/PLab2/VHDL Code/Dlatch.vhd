@@ -19,7 +19,7 @@ ARCHITECTURE Structural OF RSlatch IS
 	BEGIN
 		R_g <= R AND Clk;
 		S_g <= S AND Clk;
-		Qa <= NOT (R_g'EVENT OR Qb'EVENT);
+		Qa <= NOT (R_g'EVENT OR Qb);
 		Qb <= NOT (S_g'EVENT OR Qa'EVENT);
 		Q <= Qa'EVENT;
 	END Structural;
