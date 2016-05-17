@@ -78,13 +78,6 @@ ARCHITECTURE Structural OF toplevel IS
 
 	-- Part V
 
-	A <= SW (15 DOWNTO 0);
-
-	DecodA4 : decod port map (A(3 downto 0), HEX(4));
-	DecodA5 : decod port map (A(7 downto 4), HEX(5));
-	DecodA6 : decod port map (A(11 downto 8), HEX(6));
-	DecodA7 : decod port map (A(15 downto 12), HEX(7));
-
 	B <= SW (15 DOWNTO 0);
 
 	DecodB0 : decod port map (B(3 downto 0), HEX(0));
@@ -92,7 +85,16 @@ ARCHITECTURE Structural OF toplevel IS
 	DecodB2 : decod port map (B(11 downto 8), HEX(2));
 	DecodB3 : decod port map (B(15 downto 12), HEX(3));
 	
-	FFlatchA: FFlatch__16bits port map (KEY(0), KEY(1), A); ???
-	FFlatchB: FFlatch__16bits port map (KEY(0), KEY(1), B); ???
+	A <= SW (15 DOWNTO 0);
+	
+		
+	--  RESET   CLOCK   DADO    DADO ARMAZENADO
+	FFlatchA: FFlatch__16bits port map (KEY(0), KEY(1), A, Q);
+	
+	-- Decod recebe dado armazenado
+	DecodA4 : decod port map (Q(3 downto 0), HEX(4));
+	DecodA5 : decod port map (Q(7 downto 4), HEX(5));
+	DecodA6 : decod port map (Q(11 downto 8), HEX(6));
+	DecodA7 : decod port map (Q(15 downto 12), HEX(7));
 
 END Structural;
