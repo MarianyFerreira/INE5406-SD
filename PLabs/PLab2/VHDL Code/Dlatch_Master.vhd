@@ -14,10 +14,9 @@ ARCHITECTURE Structural OF Dlatch_Master IS
 	ATTRIBUTE keep : boolean;
 	ATTRIBUTE keep of R_g, S_g, Qa, Qb : SIGNAL IS true;
 
-	R <= NOT D;
-	S <= D;
-
 	BEGIN
+		R <= NOT D;
+		S <= D;
 		R_g <= R AND Clk;
 		S_g <= S AND Clk;
 		Qa <= NOT (R_g OR Qb);
