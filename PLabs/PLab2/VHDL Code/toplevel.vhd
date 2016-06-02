@@ -85,10 +85,10 @@ ARCHITECTURE Structural OF toplevel IS
 	DecodB2 : decod port map (B(11 downto 8), HEX(2));
 	DecodB3 : decod port map (B(15 downto 12), HEX(3));
 	
-<<<<<<< HEAD
+
 	FFlatch: FFlatch__16bits port map (KEY(0), KEY(1), A); ???
 	FFlatch: FFlatch__16bits port map (KEY(0), KEY(1), B); ???
-=======
+
 	A <= SW (15 DOWNTO 0);
 	
 		
@@ -100,6 +100,6 @@ ARCHITECTURE Structural OF toplevel IS
 	DecodA5 : decod port map (Q(7 downto 4), HEX(5));
 	DecodA6 : decod port map (Q(11 downto 8), HEX(6));
 	DecodA7 : decod port map (Q(15 downto 12), HEX(7));
->>>>>>> 1292df4ddb1b9d0e11ed404b35ffa2820a3a0d67
+
 
 END Structural;
