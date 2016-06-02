@@ -86,14 +86,14 @@ ARCHITECTURE Structural OF toplevel IS
 	DecodB3 : decod port map (B(15 downto 12), HEX(3));
 	
 
-	FFlatch: FFlatch__16bits port map (KEY(0), KEY(1), A); ???
-	FFlatch: FFlatch__16bits port map (KEY(0), KEY(1), B); ???
+	FFlatch: FFlatch16 port map (KEY(0), KEY(1), A); ???
+	FFlatch: FFlatch16 port map (KEY(0), KEY(1), B); ???
 
 	A <= SW (15 DOWNTO 0);
 	
 		
 	--  RESET   CLOCK   DADO    DADO ARMAZENADO
-	FFlatchA: FFlatch__16bits port map (KEY(0), KEY(1), A, Q);
+	FFlatchA: FFlatch16 port map (KEY(0), KEY(1), A, Q);
 	
 	-- Decod recebe dado armazenado
 	DecodA4 : decod port map (Q(3 downto 0), HEX(4));
