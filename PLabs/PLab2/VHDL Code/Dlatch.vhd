@@ -1,20 +1,22 @@
--- D latch
--- Part II
-
+-- D latch Slave
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY RSlatch IS
-PORT( Clk, R, S : IN STD_LOGIC;
-		Q : OUT STD_LOGIC
-	);
-END RSlatch;
+ENTITY Dlatch IS
+	PORT( Clk, D: IN STD_LOGIC;
+		Q : OUT STD_LOGIC;
+		Qbar : OUT STD_LOGIC
+		);
+END Dlatch;
 
-ARCHITECTURE Structural OF RSlatch IS
+ARCHITECTURE Structural OF Dlatch IS
 
-	SIGNAL R_g, S_g, Qa, Qb : STD_LOGIC;
+	SIGNAL S, R, R_g, S_g, Qa, Qb : STD_LOGIC;
 	ATTRIBUTE keep : boolean;
 	ATTRIBUTE keep of R_g, S_g, Qa, Qb : SIGNAL IS true;
+
+	R <= NOT D;
+	S <= D;
 
 	BEGIN
 		R_g <= R AND Clk;
@@ -22,17 +24,5 @@ ARCHITECTURE Structural OF RSlatch IS
 		Qa <= NOT (R_g OR Qb);
 		Qb <= NOT (S_g OR Qa);
 		Q <= Qa;
+		Qbar <= NOT Qa;
 	END Structural;
-
--- 3. Compilar o código. Use a ferramenta Quartus II RTL Viewer
--- para examinar o gate-level produzido pelo circuito a partir
--- do código, e utilizar a tecnologia de visualização ferramenta
--- para verificar que o Latch é implementado como mostrado na
--- Figura 3b do PDF.
-
--- 4. Crie um arquivo vetorial de forma de onda (.vwf), que
--- especifica as entradas e saídas do circuito. Desenhe formas
--- de onda para as entradas R e S e use o II Simulator Quartus
--- para produzir as formas de onda correspondentes para R_g, S_g,
--- Qa e Qb. Verifique se o Latch funciona como esperado utilizando
--- simulação funcional e timing.

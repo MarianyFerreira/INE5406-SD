@@ -20,13 +20,7 @@ ARCHITECTURE Structural OF toplevel IS
 	SIGNAL A, B	: STD_LOGIC_VECTOR (15 DOWNTO 0);
 
 
-	COMPONENT Dlatch_Master
-		PORT( Clk,	D: IN STD_LOGIC;
-				Q : OUT STD_LOGIC
-			);
-	END COMPONENT;
-
-	COMPONENT Dlatch_Slave
+	COMPONENT Dlatch
 	PORT( Clk, D: IN STD_LOGIC;
 		Q : OUT STD_LOGIC;
 		Qbar : OUT STD_LOGIC
@@ -39,8 +33,14 @@ ARCHITECTURE Structural OF toplevel IS
 		 );
 	END COMPONENT;
 
+	COMPONENT FFlatchNot
+	PORT ( 	D, Clk : IN STD_LOGIC ;
+			Q : OUT STD_LOGIC
+		 );
+	END COMPONENT;
 
-	COMPONENT FFlatch__16bits
+
+	COMPONENT FFlatch16
 		PORT ( 	RESET, CLK 	: IN STD_LOGIC;
 			D : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
 
@@ -63,18 +63,18 @@ ARCHITECTURE Structural OF toplevel IS
 
 
 	-- Part II
-	-- DLanch: Dlatch_Master port map(SW(1), SW(0),LEDR(0));
+	-- DLanch: Dlatch port map(SW(1), SW(0),LEDR(0), open);
 
 
 	-- Part III
-	-- Master: Dlatch_Master port map(SW(1), SW(0), Qm);
-	-- Slave: Dlatch_Slave port map(SW(1), Qm, LEDR(0), Qbar);
+	-- Master: Dlatch port map(SW(1), SW(0), Qm, open);
+	-- Slave: Dlatch port map(SW(1), Qm, LEDR(0), Qbar);
 
 
 	-- Part IV
 	-- LanchA: FFlatch port map(SW(1), SW(0),LEDR(1));
 	-- LanchB: FFlatch port map(SW(1), SW(0),LEDR(2));
-	-- LanchC: FFlatch port map(SW(1), NOT SW(0),LEDR(3));
+	-- LanchC: FFlatchNot port map(SW(1), SW(0),LEDR(3));
 
 	-- Part V
 
@@ -85,6 +85,10 @@ ARCHITECTURE Structural OF toplevel IS
 	DecodB2 : decod port map (B(11 downto 8), HEX(2));
 	DecodB3 : decod port map (B(15 downto 12), HEX(3));
 	
+<<<<<<< HEAD
+	FFlatch: FFlatch__16bits port map (KEY(0), KEY(1), A); ???
+	FFlatch: FFlatch__16bits port map (KEY(0), KEY(1), B); ???
+=======
 	A <= SW (15 DOWNTO 0);
 	
 		
@@ -96,5 +100,6 @@ ARCHITECTURE Structural OF toplevel IS
 	DecodA5 : decod port map (Q(7 downto 4), HEX(5));
 	DecodA6 : decod port map (Q(11 downto 8), HEX(6));
 	DecodA7 : decod port map (Q(15 downto 12), HEX(7));
+>>>>>>> 1292df4ddb1b9d0e11ed404b35ffa2820a3a0d67
 
 END Structural;
