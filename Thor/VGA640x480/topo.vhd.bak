@@ -1,0 +1,169 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+
+entity topo is port ( 
+			SW : IN STD_LOGIC_VECTOR(17 downto 0);
+			key: in std_logic_vector(3 downto 0);
+			clock_50: in std_logic; -- clock 50 MHz
+			HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7: out std_logic_vector(6 downto 0);
+         LEDR, LEDG: out std_logic_vector(17 downto 0)
+);
+end topo;
+
+architecture topo_estru of topo is
+   signal F1, F2, F9, F10: std_logic_vector(13 downto 0);
+	signal F11, F12: std_logic_vector(7 downto 0);
+	signal tempo, F5, F6: std_logic_vector(4 downto 0);
+	signal pontos, pontos2: std_logic_vector(3 downto 0);
+	signal match, user, clock1, clock2, clock3, inicio1, inicio2: std_logic;
+
+component ROM_1 
+	port(address : in std_logic_vector(1 downto 0);
+        data : out std_logic_vector(13 downto 0) 
+       );
+end component;
+
+component ROM_2
+	port(address : in std_logic_vector(1 downto 0);
+        data : out std_logic_vector(13 downto 0) 
+       );
+end component;
+
+component temporizador
+	port(clk, rst, init, fire: in std_logic;
+		  t_max: in std_logic_vector(4 downto 0);
+		  inicio_partida: in std_logic;
+		  tempo: out std_logic_vector(4 downto 0);
+		  user: out std_logic
+);		
+end component;
+
+component comparador
+	port (fire, user: in std_logic;
+			linha_endereco_1, linha_endereco_2, posicao_disparo: in std_logic_vector(13 downto 0);
+			match: out std_logic
+);
+end component;
+
+component contador_pontos
+	port (clock, reset: in std_logic;
+			user, match: in std_logic;
+			soma_1, soma_2: out std_logic_vector(3 downto 0)
+);
+end component;
+
+component clock_conv
+	port (in_50MHz: in std_logic;
+		   out_1Hz, out_10Hz, out_0_1Hz: out std_logic
+);		
+end component;
+
+component decod2seg
+	port(COORDENADA : in std_logic_vector(1 downto 0);
+        F : out std_logic_vector(6 downto 0) 
+       );
+end component;
+
+component decod7seg
+	port (Q: in std_logic_vector(1 downto 0);
+			L: out std_logic_vector(6 downto 0);
+			nivel: out std_logic_vector(6 downto 0)
+);
+end component;
+
+component decod8seg
+	port (pontos: in std_logic_vector(3 downto 0);
+			F: out std_logic_vector(7 downto 0)
+);
+end component;
+
+component decod14seg
+	port(COORDENADA : in std_logic_vector(13 downto 0);
+        F : out std_logic_vector(6 downto 0) 
+);
+end component;
+
+component decod_cronometro
+	port(Q: in std_logic_vector(4 downto 0);
+		  tempo_1, tempo_2: out std_logic_vector(6 downto 0) 
+);
+end component;
+
+component decod_user
+	port (user: in std_logic;
+			U, saida: out std_logic_vector(6 downto 0)
+ );
+end component;
+
+component registrador
+	port (clock, reset, init: in std_logic;
+			D: in std_logic;
+			Q: out std_logic
+);
+end component;
+
+component registrador4
+	port (clock, reset, enable: in std_logic;
+			D: in std_logic_vector(3 downto 0);
+			Q: out std_logic_vector(3 downto 0)
+);
+end component;
+
+component registrador5
+	port (clock, reset, init: in std_logic;
+			D: in std_logic_vector(4 downto 0);
+			Q: out std_logic_vector(4 downto 0)
+);
+end component;
+
+component registrador8
+	port (clock, reset, enable: in std_logic;
+			D: in std_logic_vector(7 downto 0);
+			Q: out std_logic_vector(7 downto 0)
+);
+end component;
+
+component registrador14
+	port (clock, reset, init: in std_logic;
+			D: in std_logic_vector(13 downto 0);
+			Q: out std_logic_vector(13 downto 0)
+);
+end component;
+
+component inicio_partida
+	port (init: in std_logic;
+			inicio: out std_logic
+);
+end component;
+
+component mux4x1
+	port (nivel: in std_logic_vector(1 downto 0);
+			tempo: out std_logic_vector(4 downto 0)
+);
+end component;
+
+begin
+
+L0: clock_conv port map (clock_50, clock1, clock2, clock3);
+L1: mux4x1 port map (SW(17 downto 16), F5);
+L2: decod7seg port map (SW(17 downto 16), HEX3, HEX2);
+L3: registrador5 port map (clock_50, key(0), key(2), F5, F6);
+L4: inicio_partida port map (key(2), inicio1);
+L5: registrador port map (clock_50, key(0), inicio1, inicio1, inicio2);
+L6: temporizador port map (clock1, key(0), key(2), key(3), F6, inicio2, tempo, user);
+L7: decod_user port map (user, HEX5, HEX4);
+L8: decod_cronometro port map (tempo, HEX1, HEX0);
+L9: decod2seg port map (SW(15 downto 14), HEX7);
+L10: decod14seg port map (SW(13 downto 0), HEX6);
+L11: ROM_1 port map (SW(15 downto 14), F1);
+L12: ROM_2 port map (SW(15 downto 14), F2);
+L13: registrador14 port map (clock_50, key(0), inicio1, F1, F9);
+L14: registrador14 port map (clock_50, key(0), inicio1, F2, F10);
+L15: comparador port map (key(3), user, F9, F10, SW(13 downto 0), match);
+L16: contador_pontos port map (clock_50, key(0), user, match, pontos, pontos2);
+L17: decod8seg port map (pontos, F11);
+L18: decod8seg port map (pontos2, F12);                                     
+LEDR(7 downto 0) <= F11;
+LEDG(7 downto 0) <= F12;
+
+end topo_estru;
