@@ -36,12 +36,12 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone II"
-set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE Auto
 set_global_assignment -name TOP_LEVEL_ENTITY schem
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:25:54  NOVEMBER 26, 2015"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 
 set_location_assignment PIN_B5 -to AUD_ADCDAT
