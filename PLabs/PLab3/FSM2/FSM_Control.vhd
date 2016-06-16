@@ -1,6 +1,7 @@
 library ieee; 
 use ieee.std_logic_1164.all; 
 USE IEEE.std_logic_unsigned.ALL;
+use ieee.numeric_std.all;
 
 entity FSM_Control is
 -- FSM para a Part IV
@@ -13,7 +14,7 @@ entity FSM_Control is
 		-- Saidas
 		
 		count: out  std_logic_vector(3 downto 0);
-		State: out std_logic_vector(3 downto 0)
+		state: out std_logic_vector(3 downto 0)
 );  
 end FSM_Control; 
 
@@ -25,7 +26,7 @@ architecture ARCH of FSM_Control is
 	
 	signal EA, PE : STATES;
 	signal W : std_logic_vector (1 downto 0);
-	signal countA: std_logic_vector(3 downto 0);
+	signal countA: std_logic_vector(3 downto 0):= "0000";
 	
 	begin
 	
@@ -67,32 +68,61 @@ architecture ARCH of FSM_Control is
 					when E2 =>
 
 						countA <= std_logic_vector(unsigned(countA) + 1);
-						State <= "0010";
+						state <= "0010";
 						
-						if (W = "11") then PE <= E4;
+						if (W = "00") then PE <= EA;
 						
-						else PE <= E1;	
-						end if;						
+						elsif (W = "01") then PE <= E2;
+						
+						elsif (W = "10") then PE <= E3;
+						
+						elsif (W = "11") then PE <= E4;
+						
+						else PE <= E1;
+						
+						end if;			
 				
 					when E3 =>
 				
 						countA <= std_logic_vector(unsigned(countA) + 2);
-						State <= "0011";
+						state <= "0011";
 						
-						if (W = "11") then PE <= E4;
+						if (W = "00") then PE <= EA;
+						
+						elsif (W = "01") then PE <= E2;
+						
+						elsif (W = "10") then PE <= E3;
+						
+						elsif (W = "11") then PE <= E4;
 						
 						else PE <= E1;
-						end if;					
+						
+						end if;			
 					
 					when E4 =>
 						
 						if (countA = "0000") then
 							countA <= "0000";
-							State <= "0100";
+							state <= "0100";
 						
 						else
 							countA <= std_logic_vector(unsigned(countA) -1);
+							state <= "0100";
 						end if;
+						
+						
+						
+						if (W = "00") then PE <= EA;
+						
+						elsif (W = "01") then PE <= E2;
+						
+						elsif (W = "10") then PE <= E3;
+						
+						elsif (W = "11") then PE <= E4;
+						
+						else PE <= E1;
+						
+						end if;		
 					
 			end case;
  end process;

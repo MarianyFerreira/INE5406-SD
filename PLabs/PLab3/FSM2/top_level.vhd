@@ -32,7 +32,7 @@ component FSM_Control -- FSM para a Part IV
 		
 		-- Saidas
 		count: out  std_logic_vector(3 downto 0);
-		State: out std_logic_vector(3 downto 0)
+		state: out std_logic_vector(3 downto 0)
 		);  
 end component;
 
