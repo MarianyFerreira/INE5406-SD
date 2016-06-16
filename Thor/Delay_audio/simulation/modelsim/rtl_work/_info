@@ -1,0 +1,364 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Henrique\VHDL_Projects\Delay_audio\simulation\modelsim
+Eaudio_codec_controller
+Z1 w1456430775
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
+Z5 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dD:\Henrique\VHDL_Projects\Delay_audio\simulation\modelsim
+Z8 8D:/Henrique/VHDL_Projects/Delay_audio/audio_codec_controller.vhd
+Z9 FD:/Henrique/VHDL_Projects/Delay_audio/audio_codec_controller.vhd
+l0
+L17
+Vf<@RYD[b5WmoPClg:PXk`0
+Z10 OV;C;10.0d;49
+31
+Z11 !s108 1465244631.382000
+Z12 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/audio_codec_controller.vhd|
+Z13 !s107 D:/Henrique/VHDL_Projects/Delay_audio/audio_codec_controller.vhd|
+Z14 o-93 -work work -O0
+Z15 tExplicit 1
+!s100 g_PDCMghlm:A:3L9]UQF22
+Afuncionamento
+R2
+R3
+R4
+R5
+R6
+DEx4 work 22 audio_codec_controller 0 22 f<@RYD[b5WmoPClg:PXk`0
+l98
+L40
+VjjgRWQ44TWDLKHiQJUE5O3
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 5CZVfKR=;:9D2oe?<6>Hg1
+Econtrola_delay
+Z16 w1465244437
+R4
+R5
+R6
+R7
+Z17 8D:/Henrique/VHDL_Projects/Delay_audio/Controla_delay.vhd
+Z18 FD:/Henrique/VHDL_Projects/Delay_audio/Controla_delay.vhd
+l0
+L5
+VN;Mim[@QWbNB?El5`2J:I0
+R10
+31
+Z19 !s108 1465244631.242000
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/Controla_delay.vhd|
+Z21 !s107 D:/Henrique/VHDL_Projects/Delay_audio/Controla_delay.vhd|
+R14
+R15
+!s100 lga[m^P1jF5cfb@N]hI5>2
+Abehavior
+R4
+R5
+R6
+DEx4 work 14 controla_delay 0 22 N;Mim[@QWbNB?El5`2J:I0
+l57
+L19
+V:X^k0gIlX5><gSBlmEg=c1
+R10
+31
+R19
+R20
+R21
+R14
+R15
+!s100 A1:>DI_TGWjh3K:VI3nKg3
+Edelay_audio
+R16
+R4
+R2
+R3
+R5
+R6
+R7
+8D:/Henrique/VHDL_Projects/Delay_audio/Delay_audio.vhd
+FD:/Henrique/VHDL_Projects/Delay_audio/Delay_audio.vhd
+l0
+L10
+VJCgRagI5k?9h5mTJU9O643
+!s100 0ILo;iPFOzVz8`WC`DcoI1
+R10
+31
+!s108 1465244631.554000
+!s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/Delay_audio.vhd|
+!s107 D:/Henrique/VHDL_Projects/Delay_audio/Delay_audio.vhd|
+R14
+R15
+Edelaycounter
+Z22 w1373895490
+R4
+R5
+R6
+R7
+Z23 8D:/Henrique/VHDL_Projects/Delay_audio/delayCounter.vhd
+Z24 FD:/Henrique/VHDL_Projects/Delay_audio/delayCounter.vhd
+l0
+L12
+VeMF1n6ETX7l`QP:j^GkzS0
+R10
+31
+Z25 !s108 1465244631.132000
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/delayCounter.vhd|
+Z27 !s107 D:/Henrique/VHDL_Projects/Delay_audio/delayCounter.vhd|
+R14
+R15
+!s100 KYR<::6BN20^>GISaGAHh2
+Adelaycounterinside
+R4
+R5
+R6
+DEx4 work 12 delaycounter 0 22 eMF1n6ETX7l`QP:j^GkzS0
+l20
+L18
+VQDVK55i`HG5Bjn:;oi`BM3
+R10
+31
+R25
+R26
+R27
+R14
+R15
+!s100 IA8I6g8B5=a^ON?XoNFoF0
+Edisplay7seg
+Z28 w1371845770
+R5
+R6
+R7
+Z29 8D:/Henrique/VHDL_Projects/Delay_audio/DISPLAY7SEG.vhd
+Z30 FD:/Henrique/VHDL_Projects/Delay_audio/DISPLAY7SEG.vhd
+l0
+L8
+VDU6nJ;j1eFDS6AhcSRkS:1
+R10
+31
+Z31 !s108 1465244631.008000
+Z32 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/DISPLAY7SEG.vhd|
+Z33 !s107 D:/Henrique/VHDL_Projects/Delay_audio/DISPLAY7SEG.vhd|
+R14
+R15
+!s100 ]oZgFaVA^54GoC`9mR?H90
+Afuncionamento
+R5
+R6
+DEx4 work 11 display7seg 0 22 DU6nJ;j1eFDS6AhcSRkS:1
+l18
+L15
+VfbJZn9XW9Z??cThhb<OPT0
+R10
+31
+R31
+R32
+R33
+R14
+R15
+!s100 `0WXoiMbH`^=:3fkf81iJ2
+Ei2c_controller
+Z34 w1374760201
+R4
+R2
+R3
+R5
+R6
+R7
+Z35 8D:/Henrique/VHDL_Projects/Delay_audio/I2C_Controller.vhd
+Z36 FD:/Henrique/VHDL_Projects/Delay_audio/I2C_Controller.vhd
+l0
+L9
+VKEdV<e=9Szdl;Oj`8AF]f1
+R10
+31
+Z37 !s108 1465244630.867000
+Z38 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/I2C_Controller.vhd|
+Z39 !s107 D:/Henrique/VHDL_Projects/Delay_audio/I2C_Controller.vhd|
+R14
+R15
+!s100 8RfZ5>LDG43R9De^WYF7;2
+Afuncionamento
+R4
+R2
+R3
+R5
+R6
+DEx4 work 14 i2c_controller 0 22 KEdV<e=9Szdl;Oj`8AF]f1
+l42
+L28
+Va4nNcJ4RNK]YN4dze]1>j0
+R10
+31
+R37
+R38
+R39
+R14
+R15
+!s100 Ok6H_UdFWGg3QLGU^P6D^3
+Elcd_controlador
+Z40 w1373315985
+R4
+R2
+R3
+R5
+R6
+R7
+Z41 8D:/Henrique/VHDL_Projects/Delay_audio/LCD_CONTROLADOR.vhd
+Z42 FD:/Henrique/VHDL_Projects/Delay_audio/LCD_CONTROLADOR.vhd
+l0
+L9
+V>^e_W6O]Qgbl>OZ0XE9:82
+R10
+31
+Z43 !s108 1465244630.758000
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/LCD_CONTROLADOR.vhd|
+Z45 !s107 D:/Henrique/VHDL_Projects/Delay_audio/LCD_CONTROLADOR.vhd|
+R14
+R15
+!s100 L;h>[4PcIag1<K5:c^GnY1
+Afuncionamento
+R4
+R2
+R3
+R5
+R6
+DEx4 work 15 lcd_controlador 0 22 >^e_W6O]Qgbl>OZ0XE9:82
+l36
+L26
+V@I1]9l`Q7_[WDmcXAC=nb1
+R10
+31
+R43
+R44
+R45
+R14
+R15
+!s100 oF9RnTI8zk;AF=mVAi[Kd0
+vPLL1_altpll
+IKEFkGWJ@flI5=F]XSRNVo0
+V10DDH7o421Kg7N?k_zA[R2
+R7
+w1464116193
+8D:/Henrique/VHDL_Projects/Delay_audio/db/pll1_altpll.v
+FD:/Henrique/VHDL_Projects/Delay_audio/db/pll1_altpll.v
+L0 30
+Z46 OV;L;10.0d;49
+r1
+31
+Z47 o-vlog01compat -work work -O0
+n@p@l@l1_altpll
+Z48 !s92 -vlog01compat -work work +incdir+D:/Henrique/VHDL_Projects/Delay_audio/db -O0
+!s100 2`_<_j6bHJMGI2kR4?dT>3
+!s85 0
+!s108 1465244629.557000
+!s107 D:/Henrique/VHDL_Projects/Delay_audio/db/pll1_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Henrique/VHDL_Projects/Delay_audio/db|D:/Henrique/VHDL_Projects/Delay_audio/db/pll1_altpll.v|
+!s101 -O0
+vPLL2_altpll
+IfzLfdL287aW7S^eWlT`H91
+VaBh;@TYof=SHQKhCNR61f0
+R7
+w1464631107
+8D:/Henrique/VHDL_Projects/Delay_audio/db/pll2_altpll.v
+FD:/Henrique/VHDL_Projects/Delay_audio/db/pll2_altpll.v
+L0 30
+R46
+r1
+31
+R47
+R48
+n@p@l@l2_altpll
+!s100 ;Wz]K=5S3H<]a=dYRk7BS0
+!s85 0
+!s108 1465244629.650000
+!s107 D:/Henrique/VHDL_Projects/Delay_audio/db/pll2_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Henrique/VHDL_Projects/Delay_audio/db|D:/Henrique/VHDL_Projects/Delay_audio/db/pll2_altpll.v|
+!s101 -O0
+Ereset_delay
+Z49 w1371842991
+R4
+R2
+R3
+R5
+R6
+R7
+Z50 8D:/Henrique/VHDL_Projects/Delay_audio/RESET_DELAY.vhd
+Z51 FD:/Henrique/VHDL_Projects/Delay_audio/RESET_DELAY.vhd
+l0
+L6
+VlWIY:_k69Wh^1choI6WS03
+R10
+31
+Z52 !s108 1465244630.633000
+Z53 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/RESET_DELAY.vhd|
+Z54 !s107 D:/Henrique/VHDL_Projects/Delay_audio/RESET_DELAY.vhd|
+R14
+R15
+!s100 12^mZc^^j;OO=?B61[?nO3
+Afuncionamento
+R4
+R2
+R3
+R5
+R6
+DEx4 work 11 reset_delay 0 22 lWIY:_k69Wh^1choI6WS03
+l19
+L14
+Vi`z6io;J9c<;[zi^Y9=hY2
+R10
+31
+R52
+R53
+R54
+R14
+R15
+!s100 oz9^n^T_LN<ANGFA[o[A22
+Eteste_lcd
+Z55 w1464111686
+R4
+R2
+R3
+R5
+R6
+R7
+Z56 8D:/Henrique/VHDL_Projects/Delay_audio/TESTE_LCD.vhd
+Z57 FD:/Henrique/VHDL_Projects/Delay_audio/TESTE_LCD.vhd
+l0
+L10
+Vfg=]d^ljXzfRD1kWga<@:2
+R10
+31
+Z58 !s108 1465244630.415000
+Z59 !s90 -reportprogress|300|-93|-work|work|D:/Henrique/VHDL_Projects/Delay_audio/TESTE_LCD.vhd|
+Z60 !s107 D:/Henrique/VHDL_Projects/Delay_audio/TESTE_LCD.vhd|
+R14
+R15
+!s100 GZTSGZjAJjfb7C5m]EzP;0
+Afuncionamento
+R4
+R2
+R3
+R5
+R6
+DEx4 work 9 teste_lcd 0 22 fg=]d^ljXzfRD1kWga<@:2
+l56
+L21
+V]TR0jbKkNzJVO0Ie>]7AO2
+R10
+31
+R58
+R59
+R60
+R14
+R15
+!s100 H98NfS4Kne6^dRT<iNRGm2

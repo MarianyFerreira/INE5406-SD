@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Delay_audio">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Delay_audio|Controla_delay:Delay_aud|FIFO_test:MemFIFO|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ut31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Delay_audio|PLL1:PLL1_inst|altpll:altpll_component" CBX_FILE_NAME="PLL1_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Delay_audio|PLL2:PLL2_inst|altpll:altpll_component" CBX_FILE_NAME="PLL2_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

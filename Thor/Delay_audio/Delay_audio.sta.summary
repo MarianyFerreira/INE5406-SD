@@ -1,0 +1,281 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.765
+TNS   : -91.670
+
+Type  : Slow 1200mV 85C Model Setup 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -3.161
+TNS   : -1006.354
+
+Type  : Slow 1200mV 85C Model Setup 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : -1.274
+TNS   : -13.208
+
+Type  : Slow 1200mV 85C Model Setup 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -0.364
+TNS   : -0.753
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -0.007
+TNS   : -0.007
+
+Type  : Slow 1200mV 85C Model Hold 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.092
+TNS   : -0.092
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -3.919
+TNS   : -257.950
+
+Type  : Slow 1200mV 85C Model Recovery 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.471
+TNS   : -82.298
+
+Type  : Slow 1200mV 85C Model Recovery 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -0.717
+TNS   : -2.868
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.652
+TNS   : -40.974
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 0.559
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.629
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.813
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.834
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.683
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 41.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 24999.696
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.919
+TNS   : -78.464
+
+Type  : Slow 1200mV 0C Model Setup 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.453
+TNS   : -738.107
+
+Type  : Slow 1200mV 0C Model Setup 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : -1.074
+TNS   : -10.837
+
+Type  : Slow 1200mV 0C Model Setup 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -0.225
+TNS   : -0.378
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.187
+TNS   : -0.187
+
+Type  : Slow 1200mV 0C Model Hold 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -3.409
+TNS   : -197.850
+
+Type  : Slow 1200mV 0C Model Recovery 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.930
+TNS   : -69.285
+
+Type  : Slow 1200mV 0C Model Recovery 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -0.550
+TNS   : -2.200
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.471
+TNS   : -29.644
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.496
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.579
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : 0.486
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.689
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 41.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 24999.687
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.030
+TNS   : -40.088
+
+Type  : Fast 1200mV 0C Model Setup 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -1.049
+TNS   : -27.162
+
+Type  : Fast 1200mV 0C Model Setup 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : -0.116
+TNS   : -0.335
+
+Type  : Fast 1200mV 0C Model Setup 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 1.286
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : 0.075
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.301
+TNS   : -51.928
+
+Type  : Fast 1200mV 0C Model Recovery 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.834
+TNS   : -43.526
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.229
+TNS   : -14.338
+
+Type  : Fast 1200mV 0C Model Recovery 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -0.226
+TNS   : -0.904
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.560
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1.565
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_codec_controller:AUDIO_CODEC_INST|currentState.incrementMuxSelectBits'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RESET_DELAY:INST_DELAY_RESET|oRESET'
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PLL2_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 41.413
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PLL2_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 24999.780
+TNS   : 0.000
+
+------------------------------------------------------------

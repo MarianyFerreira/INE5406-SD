@@ -1,0 +1,16 @@
+
+State Machine - |Delay_audio|Controla_delay:Delay_aud|currentState
+Name currentState.Only_read currentState.Only_write currentState.Write_Read currentState.Write_untillfull 
+currentState.Write_untillfull 0 0 0 0 
+currentState.Write_Read 0 0 1 1 
+currentState.Only_write 0 1 0 1 
+currentState.Only_read 1 0 0 1 
+
+State Machine - |Delay_audio|audio_codec_controller:AUDIO_CODEC_INST|currentState
+Name currentState.stop currentState.incrementMuxSelectBits currentState.turnOffi2cControl currentState.checkAcknowledge currentState.transmit currentState.resetState 
+currentState.resetState 0 0 0 0 0 0 
+currentState.transmit 0 0 0 0 1 1 
+currentState.checkAcknowledge 0 0 0 1 0 1 
+currentState.turnOffi2cControl 0 0 1 0 0 1 
+currentState.incrementMuxSelectBits 0 1 0 0 0 1 
+currentState.stop 1 0 0 0 0 1 
