@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="PLab3">
-		<CBX_INST_ENTRY INSTANCE_NAME="|mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_j0c1.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
