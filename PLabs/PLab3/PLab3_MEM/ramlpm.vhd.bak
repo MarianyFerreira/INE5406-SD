@@ -13,12 +13,15 @@ ENTITY ramlpm IS
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
-END ramlp
+END ramlpm;
+
 
 ARCHITECTURE SYN OF ramlpm IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
-	
+
+
+
 	COMPONENT altsyncram
 	GENERIC (
 		clock_enable_input_a		: STRING;

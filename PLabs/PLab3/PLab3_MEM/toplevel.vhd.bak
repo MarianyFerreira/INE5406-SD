@@ -31,11 +31,9 @@ ARCHITECTURE behavior of toplevel is
 	
 	mem_map: ramlpm port map (SW(15 downto 11), KEY(0), SW(7 downto 0), SW(17), data_mem);	
 	
-	LEDG(0) <= SW(17);	-- wren
-	LEDR(17 downto 0) <= SW(17 downto 0);
-	
-	--HEX7 & HEX6 <= (others => '0' & SW(15 downto 11));		  	-- address
-	--HEX5 & HEX4 <= (others => '0' & data_mem(7 downto 0));	  -- input
-	--HEX1 & HEX0 <= (others => '0' & data_mem);					  -- output mem
+	LEDG(0) <= SW(17);						  								  -- wren
+	HEX7 & HEX6 <= (others => '0' & SW(15 downto 11));		  -- address
+	HEX5 & HEX4 <= (others => '0' & data_mem(7 downto 0));	  -- input
+	HEX1 & HEX0 <= (others => '0' & data_mem);					  -- output mem
 	
 	end;
